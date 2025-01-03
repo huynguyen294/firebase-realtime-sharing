@@ -1,0 +1,37 @@
+{
+  "name": "firebase-realtime-sharing",
+  "version": "1.0.2",
+  "keywords": [
+    "share",
+    "sharing",
+    "share realtime",
+    "send data realtime",
+    "send json realtime"
+  ],
+  "description": "Using firebase realtime database to send json data",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/firebase-realtime-sharing.js",
+  "module": "dist/firebase-realtime-sharing.mjs",
+  "author": "huynguyen294",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huynguyen294/firebase-realtime-sharing.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "firebase": "^11.1.0"
+  },
+  "devDependencies": {
+    "firebase-realtime-sharing": "^1.0.2",
+    "vite": "^6.0.5"
+  },
+  "peerDependencies": {
+    "firebase": "^11.1.0"
+  }
+}

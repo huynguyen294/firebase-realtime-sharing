@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Dev</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>filebase-realtime-share</h1>
+    <div id="btns">
+      <button id="sender-btn">Sender</button>
+      <button id="receiver-btn">Receiver</button>
+    </div>
+    <div id="sender" hidden>
+      <span>data:</span>
+      <textarea name="" id="inputData">{text: "Hello world"}</textarea>
+      <button id="send-btn">Send</button>
+      <div id="codeWrapper">
+        <div id="code"></div>
+        <div id="counter"></div>
+      </div>
+    </div>
+    <div id="receiver" hidden>
+      <input id="inputCode" type="text" />
+      <button id="verify">Verify</button>
+      <div id="dataBox" style="margin-top: 10"></div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
