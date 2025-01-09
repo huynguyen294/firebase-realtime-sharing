@@ -7,7 +7,7 @@ This just simple way to help your application can sharing data together. When us
 ## Create realtime database
 
 - follow firebase document https://firebase.google.com/docs/database
-- then you need to copy the database config
+- then copy the database config
 
 ## Init database
 
@@ -45,7 +45,11 @@ if (oldCode) {
 const handleConnected = () => {} \\ do something when receiver connected
 const expireTimeSeconds = 300 \\ expire in 300 seconds
 let { code, seconds } = await sendData({ expireTimeSeconds, data }, handleConnected);
-// display the code and expiration time
+// other sendData options:
+// codeGeneratorOptions: { limit: 6, randomFn: Math.random, numeric: true, upper: true, lower: true } is default
+// codeGenerator: you can also put the custom codeGenerator
+
+// now display the code and expiration time
 ```
 
 ## At the receiving device
@@ -61,4 +65,4 @@ if (valid) {
 
 # Run example
 
-- To run example: clone this repo and then "yarn dev"
+- To run example: clone github repo and then "yarn dev"

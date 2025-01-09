@@ -6,12 +6,19 @@ const sample = (d = [], fn = Math.random) => {
   return d[Math.round(fn() * (d.length - 1))];
 };
 
-const generateUid = (limit = 16, fn = Math.random) => {
-  const allowedLetters = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ"].join("");
-  const allowedChars = ["0123456789", allowedLetters].join("");
-  const arr = [sample(allowedLetters, fn)];
+const generateUid = ({ limit, randomFn, numeric, upper, lower }) => {
+  const allowed = [];
+  if (numeric) allowed.push("0123456789");
+  if (upper) allowed.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (lower) allowed.push("abcdefghijklmnopqrstuvwxyz");
+  if (!numeric && !upper && !lower)
+    throw new Error(
+      "Sample error! At least one of the following is required: a numeric character, an uppercase letter, or a lowercase letter."
+    );
+  const allowedChars = allowed.join("");
+  const arr = [sample(allowedLetters, randomFn)];
   for (let i = 0; i < limit - 1; i++) {
-    arr.push(sample(allowedChars, fn));
+    arr.push(sample(allowedChars, randomFn));
   }
 
   return arr.join("");
@@ -65,11 +72,26 @@ const send = async (data) => {
 };
 
 // if sent return old code and seconds, else return created code and default seconds
-const sendData = async ({ data, expireTimeSeconds = EXPIRE_TIME_SECONDS }, onConnected = () => {}) => {
+const defaultCodeGeneratorOptions = {
+  limit: 6,
+  randomFn: Math.random,
+  numeric: true,
+  upper: true,
+  lower: true,
+};
+const sendData = async (
+  {
+    data,
+    expireTimeSeconds = EXPIRE_TIME_SECONDS,
+    codeGeneratorOptions = defaultCodeGeneratorOptions,
+    codeGenerator = generateUid,
+  },
+  onConnected = () => {}
+) => {
   const db = getDatabase(initFirebase());
   const uid = getFBUid();
 
-  let code = generateUid(6).toUpperCase();
+  let code = codeGenerator(codeGeneratorOptions).toUpperCase();
   let dbRef = ref(db, `otps/${code}`);
 
   let seconds = expireTimeSeconds;

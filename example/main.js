@@ -1,4 +1,11 @@
-import { initFirebase, sendData, verifyCode, receiveData, checkCode, getCurrentTimeInSeconds } from "firebase-realtime-sharing";
+import {
+  initFirebase,
+  sendData,
+  verifyCode,
+  receiveData,
+  checkCode,
+  getCurrentTimeInSeconds,
+} from "firebase-realtime-sharing";
 
 const apiKey = import.meta.env.VITE_FIREBASE_API_KEY;
 const authDomain = import.meta.env.VITE_FIREBASE_AUTH_DOMAIN;
@@ -9,7 +16,16 @@ const appId = import.meta.env.VITE_FIREBASE_APP_ID;
 const measurementId = import.meta.env.VITE_FIREBASE_MEASUREMENT_ID;
 const databaseURL = import.meta.env.VITE_FIREBASE_DATABASE_URL;
 
-const firebaseConfig = { apiKey, authDomain, databaseURL, projectId, storageBucket, messagingSenderId, appId, measurementId };
+const firebaseConfig = {
+  apiKey,
+  authDomain,
+  databaseURL,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId,
+  measurementId,
+};
 
 initFirebase(firebaseConfig);
 const senderBtn = document.getElementById("sender-btn");
