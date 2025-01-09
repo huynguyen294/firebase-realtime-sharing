@@ -1,6 +1,6 @@
 {
   "name": "firebase-realtime-sharing",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "share",
     "sharing",
@@ -22,13 +22,15 @@
   "license": "MIT",
   "scripts": {
     "build": "vite build",
+    "prepublish": "vite build",
+    "publish": "npm publish",
     "dev": "vite"
   },
   "dependencies": {
     "firebase": "^11.1.0"
   },
   "devDependencies": {
-    "firebase-realtime-sharing": "^1.0.2",
+    "firebase-realtime-sharing": "^1.0.5",
     "vite": "^6.0.5"
   },
   "peerDependencies": {

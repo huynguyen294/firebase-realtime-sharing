@@ -776,10 +776,10 @@ faye-websocket@0.11.4:
   dependencies:
     websocket-driver ">=0.5.1"
 
-firebase-realtime-sharing@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/firebase-realtime-sharing/-/firebase-realtime-sharing-1.0.2.tgz#deb5ee93b284081a4ff12ca0a29808651caf3aa0"
-  integrity sha512-QrJPYXptB96IsKsZanL9Ryh1AKulMG95gsn2lONHYD51CSdc9WOz+oWwNN4JAvoJSMyyhDZbLXldKIXESEzemA==
+firebase-realtime-sharing@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/firebase-realtime-sharing/-/firebase-realtime-sharing-1.0.5.tgz#435e5319a766ecbdbabd8cded1ed4a2f0a2e66d3"
+  integrity sha512-DVO1jHX4O59ZZY6FCXWttNwUNaqKqHuwxEZnevM0obd85MfMzpmH68mZPp4C03UXl1PSdNRz53O5m6jtHzPCrg==
   dependencies:
     firebase "^11.1.0"
 
