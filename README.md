@@ -1,6 +1,6 @@
 # Firebase Realtime Sharing
 
-This just simple way to help your application can sharing data together. When user click send, it will generate a code and then in the receiving device just need enter the code to get data.
+This is just a simple way to help the devices using your app share data with each other. When user click send, it will generate a code and then in the receiving device just need enter the code to get data.
 
 # Get started
 

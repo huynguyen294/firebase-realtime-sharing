@@ -1,12 +1,16 @@
 {
   "name": "firebase-realtime-sharing",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "share",
     "sharing",
     "share realtime",
     "send data realtime",
-    "send json realtime"
+    "send json realtime",
+    "firebase realtime sharing",
+    "realtime sharing",
+    "realtime-sharing",
+    "firebase-realtime-sharing"
   ],
   "description": "Using firebase realtime database to send json data",
   "files": [
