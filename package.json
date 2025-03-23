@@ -1,6 +1,6 @@
 {
   "name": "firebase-realtime-sharing",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": [
     "share",
     "sharing",
@@ -30,10 +30,9 @@
     "publish": "npm publish",
     "dev": "vite"
   },
-  "dependencies": {
-    "firebase": "^11.1.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "firebase": "^11.1.0",
     "firebase-realtime-sharing": "^1.0.5",
     "vite": "^6.0.5"
   },
