@@ -66,3 +66,7 @@ if (valid) {
 # Run example
 
 - To run example: clone github repo and then "yarn dev"
+
+## Demo code
+
+- link: https://github.com/huynguyen294/firebase-realtime-sharing/blob/main/example/main.js
