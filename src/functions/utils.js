@@ -16,7 +16,7 @@ const generateUid = ({ limit, randomFn, numeric, upper, lower }) => {
       "Sample error! At least one of the following is required: a numeric character, an uppercase letter, or a lowercase letter."
     );
   const allowedChars = allowed.join("");
-  const arr = [sample(allowedLetters, randomFn)];
+  const arr = [sample(allowedChars, randomFn)];
   for (let i = 0; i < limit - 1; i++) {
     arr.push(sample(allowedChars, randomFn));
   }
